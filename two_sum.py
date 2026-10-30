@@ -10,6 +10,6 @@ def two_sum(array_given, target):
         num = array_given[i]
         complement = target - num
         if complement in search_map:
-            return [i, search_map[complement]]
+            return [search_map[complement], i]
         search_map[num] = i
     return -1 # if nothing is found
